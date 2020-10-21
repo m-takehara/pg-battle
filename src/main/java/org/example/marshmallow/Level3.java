@@ -54,15 +54,6 @@ public class Level3 {
         return new Input(n, m, pairs);
     }
 
-    static class Pin {
-        private final int position;
-        private boolean isKnocked = false;
-
-        Pin(int position) {
-            this.position = position;
-        }
-    }
-
     static class Input {
         private final int playerCount;
         private final int pinCount;
@@ -89,7 +80,6 @@ public class Level3 {
             if (!(obj instanceof Pair)) {
                 return false;
             }
-
             return this.a == ((Pair) obj).a && this.b == ((Pair) obj).b;
         }
     }
